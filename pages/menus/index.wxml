@@ -1,0 +1,12 @@
+<view class="container">  
+  <view class="list">
+    <view class="list_item {{currentId == item.id ? 'current' : ''}}" 
+      wx:for="{{names}}" 
+      wx:key="index"
+    >{{item.name}}</view>
+  </view>
+  <view class="display-window">{{ currentName }}</view>  
+  <view class="add-button" bindtap="startRollCall">
+    <image src="../../image/start.png" mode=""/>
+  </view>  
+</view>

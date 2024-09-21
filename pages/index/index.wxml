@@ -1,0 +1,14 @@
+<view class="container">  
+  <view class="list-container">  
+    <block wx:for="{{items}}" wx:key="index">  
+      <view class="list-item" bindtap="navigateToDetail">  
+        <image class="item-icon" src="../../image/eat_icon.png" mode="aspectFill"></image>  
+        <text class="item-name">{{item.title}}</text>  
+        <view wx:if="{{!item.defult}}" class="item-button" data-inx="{{index}}" catch:tap="edit"><image src="../../image/edit.png" mode=""/></view>  
+      </view>  
+    </block>  
+  </view>  
+  <view class="add-button" bindtap="addItem">
+    <image src="../../image/add_w.png" mode=""/>
+  </view>  
+</view>

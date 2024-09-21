@@ -1,0 +1,21 @@
+<view class="container">  
+  <view class="input-module">  
+    <text class="module-title">标题</text>  
+    <input class="module-input" placeholder="请输入标题" value="{{title}}" bindinput="bindTitleInput" />  
+  </view>  
+  <view class="input-module">  
+    <text class="module-title">内容</text>  
+    <view class="list" >
+      <view class="list_item" wx:for="{{contentList}}" wx:key="index">
+        <image class="item_icon" src="../../image/caomei.png" mode=""/>
+        <view class="item_name">
+          <!-- <view wx:if="{{!item['edit']}}">{{item['name']}}</view> -->
+          <input  data-inx="{{index}}" bindinput="changeName" type="text" value="{{item['name']}}" />
+        </view>
+        <image wx:if="{{index == (contentList.length - 1)}}" class="add_icon" src="../../image/add.png" mode="" data-inx="{{index}}" bind:tap="addItem" />
+        <image wx:if="{{index != (contentList.length - 1)}}" class="del_icon" src="../../image/del.png" mode="" data-inx="{{index}}" bind:tap="delItem" />
+      </view>
+    </view>
+  </view>  
+  <button class="complete-button" bindtap="completeInput">完成</button>  
+</view>

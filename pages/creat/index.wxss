@@ -1,0 +1,88 @@
+/* pages/creat/index.wxss */
+/* 继承上一页的配色风格，使用类似色系 */  
+view {
+  box-sizing: border-box;
+}
+.container {  
+  height: 100vh;  
+  padding: 20rpx;  
+  box-sizing: border-box;  
+  background-color: cornflowerblue;  
+}  
+  
+.input-module {  
+  width: 100%;
+  margin-bottom: 60rpx; /* 增大模块之间的间距 */  
+  display: flex;  
+  flex-direction: column;  
+  align-items: flex-start; /* 让标题和输入框垂直对齐 */  
+}  
+  
+.module-title {  
+  font-size: 18px;  
+  font-weight: bold;  
+  margin-bottom: 15rpx; /* 稍微增大标题和输入框之间的间距 */  
+}  
+.module-input {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.module-input,  
+.module-textarea {  
+  box-sizing: border-box;
+  width: 100%; /* 保持宽度为100% */  
+  padding: 10rpx;  
+  border-radius: 10rpx;  
+  border: 1rpx solid #ddd;  
+  background-color: #fff;  
+}  
+  
+.module-textarea {  
+  /* 根据需要调整textarea的高度，这里设置为自动高度以适应内容 */  
+  /* 注意：微信小程序原生textarea不支持自动高度，可能需要自定义组件或使用其他方法 */  
+  /* height: auto; （微信小程序不支持，需要额外处理）*/  
+  min-height: 100rpx; /* 设置最小高度 */  
+  height: 2
+  50rpx; /* 设置默认高度 */  
+} 
+  
+.complete-button {  
+  padding: 10rpx 20rpx;  
+  background-color: #fff;  
+  color: #1a1a1a;  
+  border-radius: 5rpx;  
+  margin-top: 20rpx;  
+}
+
+.list_item {
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list_item image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.list_item .item_name {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  width: 400rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  overflow: hidden;
+  font-size: 34rpx;
+}
+
+.item_name view,
+.item_name input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding-left: 20rpx;
+  font-family: serif;
+}

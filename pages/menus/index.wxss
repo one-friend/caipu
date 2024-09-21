@@ -1,0 +1,386 @@
+/* 容器样式 */  
+view {
+  box-sizing: border-box;
+}
+.container {  
+  height: 100vh; /* 占据整个视口高度 */  
+  padding: 20rpx; /* 适当的内边距 */  
+}  
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list_item {
+  margin: 10rpx;
+  padding: 10rpx 20rpx;
+  background-color: cornflowerblue;
+  color: #fff;
+  font-size: 34rpx;
+  border-radius: 25rpx;
+}
+.current {
+  transform: scale(1.2);
+  background-color: coral;
+}
+.shark {
+  animation-name: myfirst;
+  animation-duration: .2s;
+  animation-iteration-count: infinite;
+}
+/* 显示窗口样式 */  
+.display-window {  
+  display: flex;  
+  justify-content: center; /* 水平居中 */  
+  align-items: center; /* 垂直居中 */  
+  font-size: 28rpx; /* 字体大小 */  
+  color: #fff; /* 白色文字 */  
+  margin-bottom: 30rpx; /* 与按钮之间的间距 */  
+  padding: 20rpx; /* 内边距 */  
+  border-radius: 10rpx; /* 圆角 */  
+  background-color: #007bff; /* 深蓝色背景 */  
+  /* 设置默认高度，可以根据内容动态调整 */  
+  height: 100rpx; /* 示例高度 */  
+}  
+  
+/* 按钮样式 */  
+.btn {  
+  display: flex;  
+  justify-content: center; /* 水平居中 */  
+  align-items: center; /* 垂直居中 */  
+  padding: 10rpx 20rpx; /* 内边距 */  
+  font-size: 24rpx; /* 字体大小 */  
+  color: #fff; /* 白色文字 */  
+  background-color: #007bff; /* 深蓝色背景 */  
+  border: none; /* 无边框 */  
+  border-radius: 5rpx; /* 圆角 */  
+  margin-top: 20rpx; /* 与显示窗口之间的间距 */  
+}  
+  
+/* 按钮点击效果（可选） */  
+.btn::active {  
+  background-color: #0056b3; /* 按下时颜色稍深 */  
+}
+
+.add-button {
+  position: fixed;
+  left: calc(50% - 65rpx);
+  bottom: calc(50% - 65rpx);
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  background-color: rgb(211, 55, 50);
+}
+
+.add-button image {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes myfirst
+{
+  2% {
+    -webkit-transform: translate(-.5px, .5px) rotate(-.5deg);
+}
+4% {
+    -webkit-transform: translate(2.5px, .5px) rotate(-.5deg);
+}
+6% {
+    -webkit-transform: translate(-.5px, 1.5px) rotate(1.5deg);
+}
+8% {
+    -webkit-transform: translate(.5px, .5px) rotate(-.5deg);
+}
+10% {
+    -webkit-transform: translate(-.5px, -1.5px) rotate(-.5deg);
+}
+12% {
+    -webkit-transform: translate(.5px, -.5px) rotate(1.5deg);
+}
+14% {
+    -webkit-transform: translate(1.5px, 2.5px) rotate(-.5deg);
+}
+16% {
+    -webkit-transform: translate(-.5px, -.5px) rotate(.5deg);
+}
+18% {
+    -webkit-transform: translate(2.5px, .5px) rotate(.5deg);
+}
+20% {
+    -webkit-transform: translate(.5px, -1.5px) rotate(-.5deg);
+}
+22% {
+    -webkit-transform: translate(2.5px, 2.5px) rotate(-.5deg);
+}
+24% {
+    -webkit-transform: translate(2.5px, 1.5px) rotate(1.5deg);
+}
+26% {
+    -webkit-transform: translate(.5px, 1.5px) rotate(-.5deg);
+}
+28% {
+    -webkit-transform: translate(1.5px, .5px) rotate(.5deg);
+}
+30% {
+    -webkit-transform: translate(-1.5px, 2.5px) rotate(1.5deg);
+}
+32% {
+    -webkit-transform: translate(.5px, .5px) rotate(.5deg);
+}
+34% {
+    -webkit-transform: translate(.5px, 1.5px) rotate(1.5deg);
+}
+36% {
+    -webkit-transform: translate(2.5px, -.5px) rotate(1.5deg);
+}
+38% {
+    -webkit-transform: translate(.5px, 1.5px) rotate(1.5deg);
+}
+40% {
+    -webkit-transform: translate(2.5px, 1.5px) rotate(1.5deg);
+}
+42% {
+    -webkit-transform: translate(2.5px, -1.5px) rotate(.5deg);
+}
+44% {
+    -webkit-transform: translate(.5px, -.5px) rotate(.5deg);
+}
+46% {
+    -webkit-transform: translate(1.5px, -1.5px) rotate(.5deg);
+}
+48% {
+    -webkit-transform: translate(-1.5px, -.5px) rotate(.5deg);
+}
+50% {
+    -webkit-transform: translate(2.5px, -1.5px) rotate(1.5deg);
+}
+52% {
+    -webkit-transform: translate(.5px, 1.5px) rotate(.5deg);
+}
+54% {
+    -webkit-transform: translate(2.5px, -.5px) rotate(.5deg);
+}
+56% {
+    -webkit-transform: translate(2.5px, 2.5px) rotate(.5deg);
+}
+58% {
+    -webkit-transform: translate(2.5px, 1.5px) rotate(-.5deg);
+}
+60% {
+    -webkit-transform: translate(1.5px, 1.5px) rotate(-.5deg);
+}
+62% {
+    -webkit-transform: translate(-.5px, .5px) rotate(-.5deg);
+}
+64% {
+    -webkit-transform: translate(2.5px, 1.5px) rotate(-.5deg);
+}
+66% {
+    -webkit-transform: translate(-1.5px, .5px) rotate(1.5deg);
+}
+68% {
+    -webkit-transform: translate(1.5px, -1.5px) rotate(.5deg);
+}
+70% {
+    -webkit-transform: translate(.5px, .5px) rotate(-.5deg);
+}
+72% {
+    -webkit-transform: translate(-.5px, 1.5px) rotate(1.5deg);
+}
+74% {
+    -webkit-transform: translate(-1.5px, 1.5px) rotate(1.5deg);
+}
+76% {
+    -webkit-transform: translate(2.5px, -.5px) rotate(.5deg);
+}
+78% {
+    -webkit-transform: translate(2.5px, 2.5px) rotate(.5deg);
+}
+80% {
+    -webkit-transform: translate(-1.5px, 2.5px) rotate(.5deg);
+}
+82% {
+    -webkit-transform: translate(-1.5px, -.5px) rotate(.5deg);
+}
+84% {
+    -webkit-transform: translate(.5px, 1.5px) rotate(-.5deg);
+}
+86% {
+    -webkit-transform: translate(-.5px, 2.5px) rotate(.5deg);
+}
+88% {
+    -webkit-transform: translate(2.5px, 2.5px) rotate(1.5deg);
+}
+90% {
+    -webkit-transform: translate(-.5px, -1.5px) rotate(-.5deg);
+}
+92% {
+    -webkit-transform: translate(1.5px, .5px) rotate(.5deg);
+}
+94% {
+    -webkit-transform: translate(-.5px, -.5px) rotate(.5deg);
+}
+96% {
+    -webkit-transform: translate(1.5px, .5px) rotate(1.5deg);
+}
+98% {
+    -webkit-transform: translate(.5px, -.5px) rotate(1.5deg);
+}
+0%, 100% {
+    -webkit-transform: translate(0, 0) rotate(0);
+}
+}
+ 
+@-webkit-keyframes myfirst /* Safari 与 Chrome */
+{
+  2% {
+    -webkit-transform: translate(-.5px, .5px) rotate(-.5deg);
+}
+4% {
+    -webkit-transform: translate(2.5px, .5px) rotate(-.5deg);
+}
+6% {
+    -webkit-transform: translate(-.5px, 1.5px) rotate(1.5deg);
+}
+8% {
+    -webkit-transform: translate(.5px, .5px) rotate(-.5deg);
+}
+10% {
+    -webkit-transform: translate(-.5px, -1.5px) rotate(-.5deg);
+}
+12% {
+    -webkit-transform: translate(.5px, -.5px) rotate(1.5deg);
+}
+14% {
+    -webkit-transform: translate(1.5px, 2.5px) rotate(-.5deg);
+}
+16% {
+    -webkit-transform: translate(-.5px, -.5px) rotate(.5deg);
+}
+18% {
+    -webkit-transform: translate(2.5px, .5px) rotate(.5deg);
+}
+20% {
+    -webkit-transform: translate(.5px, -1.5px) rotate(-.5deg);
+}
+22% {
+    -webkit-transform: translate(2.5px, 2.5px) rotate(-.5deg);
+}
+24% {
+    -webkit-transform: translate(2.5px, 1.5px) rotate(1.5deg);
+}
+26% {
+    -webkit-transform: translate(.5px, 1.5px) rotate(-.5deg);
+}
+28% {
+    -webkit-transform: translate(1.5px, .5px) rotate(.5deg);
+}
+30% {
+    -webkit-transform: translate(-1.5px, 2.5px) rotate(1.5deg);
+}
+32% {
+    -webkit-transform: translate(.5px, .5px) rotate(.5deg);
+}
+34% {
+    -webkit-transform: translate(.5px, 1.5px) rotate(1.5deg);
+}
+36% {
+    -webkit-transform: translate(2.5px, -.5px) rotate(1.5deg);
+}
+38% {
+    -webkit-transform: translate(.5px, 1.5px) rotate(1.5deg);
+}
+40% {
+    -webkit-transform: translate(2.5px, 1.5px) rotate(1.5deg);
+}
+42% {
+    -webkit-transform: translate(2.5px, -1.5px) rotate(.5deg);
+}
+44% {
+    -webkit-transform: translate(.5px, -.5px) rotate(.5deg);
+}
+46% {
+    -webkit-transform: translate(1.5px, -1.5px) rotate(.5deg);
+}
+48% {
+    -webkit-transform: translate(-1.5px, -.5px) rotate(.5deg);
+}
+50% {
+    -webkit-transform: translate(2.5px, -1.5px) rotate(1.5deg);
+}
+52% {
+    -webkit-transform: translate(.5px, 1.5px) rotate(.5deg);
+}
+54% {
+    -webkit-transform: translate(2.5px, -.5px) rotate(.5deg);
+}
+56% {
+    -webkit-transform: translate(2.5px, 2.5px) rotate(.5deg);
+}
+58% {
+    -webkit-transform: translate(2.5px, 1.5px) rotate(-.5deg);
+}
+60% {
+    -webkit-transform: translate(1.5px, 1.5px) rotate(-.5deg);
+}
+62% {
+    -webkit-transform: translate(-.5px, .5px) rotate(-.5deg);
+}
+64% {
+    -webkit-transform: translate(2.5px, 1.5px) rotate(-.5deg);
+}
+66% {
+    -webkit-transform: translate(-1.5px, .5px) rotate(1.5deg);
+}
+68% {
+    -webkit-transform: translate(1.5px, -1.5px) rotate(.5deg);
+}
+70% {
+    -webkit-transform: translate(.5px, .5px) rotate(-.5deg);
+}
+72% {
+    -webkit-transform: translate(-.5px, 1.5px) rotate(1.5deg);
+}
+74% {
+    -webkit-transform: translate(-1.5px, 1.5px) rotate(1.5deg);
+}
+76% {
+    -webkit-transform: translate(2.5px, -.5px) rotate(.5deg);
+}
+78% {
+    -webkit-transform: translate(2.5px, 2.5px) rotate(.5deg);
+}
+80% {
+    -webkit-transform: translate(-1.5px, 2.5px) rotate(.5deg);
+}
+82% {
+    -webkit-transform: translate(-1.5px, -.5px) rotate(.5deg);
+}
+84% {
+    -webkit-transform: translate(.5px, 1.5px) rotate(-.5deg);
+}
+86% {
+    -webkit-transform: translate(-.5px, 2.5px) rotate(.5deg);
+}
+88% {
+    -webkit-transform: translate(2.5px, 2.5px) rotate(1.5deg);
+}
+90% {
+    -webkit-transform: translate(-.5px, -1.5px) rotate(-.5deg);
+}
+92% {
+    -webkit-transform: translate(1.5px, .5px) rotate(.5deg);
+}
+94% {
+    -webkit-transform: translate(-.5px, -.5px) rotate(.5deg);
+}
+96% {
+    -webkit-transform: translate(1.5px, .5px) rotate(1.5deg);
+}
+98% {
+    -webkit-transform: translate(.5px, -.5px) rotate(1.5deg);
+}
+0%, 100% {
+    -webkit-transform: translate(0, 0) rotate(0);
+}
+}
